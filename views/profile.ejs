@@ -1,0 +1,13 @@
+<%- include('layout', {title: 'User Profile'}) %>
+<div>
+    <h2>User Profile</h2>
+    <p><strong>Email:</strong> <%= user.email %></p>
+    <p><strong>Username:</strong> <%= user.username %></p>
+    <form action="/user/update" method="post">
+        <label for="username">Update Username:</label>
+        <input type="text" id="username" name="username" value="<%= user.username %>" required>
+        <label for="email">Update Email:</label>
+        <input type="email" id="email" name="email" value="<%= user.email %>" required>
+        <button type="submit">Update Profile</button>
+    </form>
+</div>
